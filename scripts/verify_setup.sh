@@ -26,7 +26,7 @@ echo ""
 
 # Check Docker Compose
 echo "2. Checking Docker Compose..."
-if docker-compose version > /dev/null 2>&1; then
+if docker compose version > /dev/null 2>&1; then
     echo -e "${GREEN}✓${NC} Docker Compose is available"
 else
     echo -e "${RED}✗${NC} Docker Compose is not available"
@@ -47,12 +47,12 @@ echo ""
 
 # Check services status
 echo "4. Checking services status..."
-if docker-compose ps | grep -q "Up"; then
-    docker-compose ps
+if docker compose ps | grep -q "Up"; then
+    docker compose ps
     echo -e "${GREEN}✓${NC} Services are running"
 else
     echo -e "${YELLOW}!${NC} Services are not running"
-    echo "Run 'make init' or 'docker-compose up -d' to start services"
+    echo "Run 'make init' or 'docker compose up -d' to start services"
 fi
 echo ""
 

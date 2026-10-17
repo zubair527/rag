@@ -185,23 +185,23 @@ make clean          # Remove all data (WARNING: destructive)
 
 ```bash
 # Start services
-docker-compose up -d
+docker compose up -d
 
 # Stop services
-docker-compose down
+docker compose down
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # View logs for specific service
-docker-compose logs -f fastapi
-docker-compose logs -f ollama
+docker compose logs -f fastapi
+docker compose logs -f ollama
 
 # Check service status
-docker-compose ps
+docker compose ps
 
 # Restart specific service
-docker-compose restart fastapi
+docker compose restart fastapi
 ```
 
 ## Configuration
@@ -273,12 +273,12 @@ Available metrics:
 
 ```bash
 # All services
-docker-compose logs -f
+docker compose logs -f
 
 # Specific service
-docker-compose logs -f fastapi
-docker-compose logs -f ollama
-docker-compose logs -f weaviate
+docker compose logs -f fastapi
+docker compose logs -f ollama
+docker compose logs -f weaviate
 ```
 
 ## Models
@@ -305,7 +305,7 @@ OLLAMA_MODEL=llama3.2:3b
 
 3. Restart FastAPI:
 ```bash
-docker-compose restart fastapi
+docker compose restart fastapi
 ```
 
 Available models:
@@ -325,13 +325,13 @@ docker exec rag-ollama ollama list
 
 ```bash
 # Check service status
-docker-compose ps
+docker compose ps
 
 # View logs for failing service
-docker-compose logs [service-name]
+docker compose logs [service-name]
 
 # Restart specific service
-docker-compose restart [service-name]
+docker compose restart [service-name]
 ```
 
 ### Ollama Model Not Found
@@ -348,13 +348,13 @@ docker exec rag-ollama ollama list
 
 ```bash
 # Check MariaDB logs
-docker-compose logs mariadb
+docker compose logs mariadb
 
 # Verify database is healthy
-docker-compose ps mariadb
+docker compose ps mariadb
 
 # Restart database
-docker-compose restart mariadb
+docker compose restart mariadb
 ```
 
 ### High Memory Usage

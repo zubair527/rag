@@ -20,25 +20,26 @@ help:
 # Initialize everything (first time setup)
 init:
 	@echo "Initializing Production RAG System..."
-	@chmod +x scripts/init_services.sh
+	@chmod +x scripts/check_docker.sh scripts/init_services.sh
+	@./scripts/check_docker.sh
 	@./scripts/init_services.sh
 
 # Build images
 build:
-	docker-compose build
+	docker compose build
 
 # Start services
 up:
-	docker-compose up -d
+	docker compose up -d
 	@echo "Services started. Access the UI at http://localhost"
 
 # Stop services
 down:
-	docker-compose down
+	docker compose down
 
 # View logs
 logs:
-	docker-compose logs -f
+	docker compose logs -f
 
 # Check health
 health:
@@ -53,7 +54,7 @@ setup-ollama:
 # Clean everything (removes volumes - WARNING: deletes all data)
 clean:
 	@echo "WARNING: This will remove all data including documents, chat history, and embeddings!"
-	@read -p "Are you sure? (yes/no): " confirm && [ "$$confirm" = "yes" ] && docker-compose down -v || echo "Cancelled"
+	@read -p "Are you sure? (yes/no): " confirm && [ "$$confirm" = "yes" ] && docker compose down -v || echo "Cancelled"
 
 # Restart services
 restart: down up
@@ -68,16 +69,16 @@ shell-db:
 
 # View specific service logs
 logs-api:
-	docker-compose logs -f fastapi
+	docker compose logs -f fastapi
 
 logs-ui:
-	docker-compose logs -f streamlit
+	docker compose logs -f streamlit
 
 logs-ollama:
-	docker-compose logs -f ollama
+	docker compose logs -f ollama
 
 logs-weaviate:
-	docker-compose logs -f weaviate
+	docker compose logs -f weaviate
 
 # Backup database
 backup-db:
@@ -87,4 +88,4 @@ backup-db:
 
 # Show running containers
 ps:
-	docker-compose ps
+	docker compose ps

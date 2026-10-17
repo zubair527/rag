@@ -24,12 +24,12 @@ fi
 echo ""
 
 echo "Step 2: Building Docker images..."
-docker-compose build
+docker compose build
 echo "✓ Docker images built successfully"
 echo ""
 
 echo "Step 3: Starting services..."
-docker-compose up -d
+docker compose up -d
 echo "✓ Services started"
 echo ""
 
@@ -38,7 +38,7 @@ sleep 30
 echo ""
 
 echo "Step 5: Checking service health..."
-docker-compose ps
+docker compose ps
 echo ""
 
 echo "Step 6: Downloading Ollama model (llama3.2:1b - ~700MB)..."
@@ -59,11 +59,11 @@ echo "  - API Health Check:    http://localhost/api/v1/health"
 echo "  - Prometheus:          http://localhost:9090"
 echo ""
 echo "To view logs:"
-echo "  docker-compose logs -f"
+echo "  docker compose logs -f"
 echo ""
 echo "To stop services:"
-echo "  docker-compose down"
+echo "  docker compose down"
 echo ""
 echo "To stop and remove all data:"
-echo "  docker-compose down -v"
+echo "  docker compose down -v"
 echo ""
