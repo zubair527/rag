@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Environment
+.env
+
+# Data
+data/
+uploads/
+*.pdf
+backups/
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile*
+
+# Documentation
+README.md
+docs/
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# Test
+tests/
+.pytest_cache/
+.coverage
+
+# Volumes
+*_data/
+prometheus_data/
+mariadb_data/
+redis_data/
+weaviate_data/
+ollama_data/
