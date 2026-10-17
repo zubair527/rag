@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides detailed architecture information for the Production RAG System.
+This document provides detailed architecture information for the RAG system.
 
 ## High-Level Architecture
 
