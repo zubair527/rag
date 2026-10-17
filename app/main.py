@@ -21,7 +21,7 @@ settings = get_settings()
 async def lifespan(app: FastAPI):
     """Application lifespan events"""
     # Startup
-    logger.info("Starting Production RAG System...")
+    logger.info("Starting RAG...")
 
     # Initialize database
     init_db()
@@ -36,7 +36,7 @@ async def lifespan(app: FastAPI):
     yield
 
     # Shutdown
-    logger.info("Shutting down Production RAG System...")
+    logger.info("Shutting down RAG...")
     vector_store.close()
 
 

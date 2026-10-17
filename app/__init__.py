@@ -1,2 +1,2 @@
-"""Production RAG System - Main Application Package"""
+"""RAG - Main Application Package"""
 __version__ = "1.0.0"

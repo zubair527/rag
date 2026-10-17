@@ -1,4 +1,4 @@
-# Production RAG System
+# RAG
 
 A production-grade Retrieval-Augmented Generation (RAG) system built with FastAPI, LangChain, Weaviate, and Ollama. All services run locally in Docker containers.
 

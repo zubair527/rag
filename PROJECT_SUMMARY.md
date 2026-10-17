@@ -1,4 +1,4 @@
-# Production RAG System - Project Summary
+# RAG - Project Summary
 
 ## Overview
 

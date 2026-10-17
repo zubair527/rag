@@ -1,4 +1,4 @@
-"""Streamlit UI for Production RAG System"""
+"""Streamlit UI for RAG"""
 import streamlit as st
 import httpx
 import json
@@ -16,7 +16,7 @@ DELETE_API = f"{API_BASE_URL}/documents"
 HEALTH_API = "http://nginx/api/v1/health"
 
 st.set_page_config(
-    page_title="Production RAG System",
+    page_title="RAG",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -110,7 +110,7 @@ if "messages" not in st.session_state:
 
 
 # Main UI
-st.title("🤖 Production RAG System")
+st.title("🤖 RAG")
 st.markdown("---")
 
 # Sidebar
@@ -332,4 +332,4 @@ with tab3:
 
 # Footer
 st.markdown("---")
-st.caption("Production RAG System v1.0.0")
+st.caption("RAG v1.0.0")
