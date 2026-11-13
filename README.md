@@ -92,7 +92,7 @@ A production-grade Retrieval-Augmented Generation (RAG) system built with FastAP
 
 ```bash
 # Clone or navigate to the project directory
-cd zee-prod-rag
+cd rag
 
 # Initialize all services (first time setup)
 make init
